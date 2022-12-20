@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="twoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Aff-xk-3Ns">
+                                <rect key="frame" x="132" y="110" width="128" height="416"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="if4-X3-vPr">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmw-Df-NEL">
+                                        <rect key="frame" x="0.0" y="144" width="128" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryt-TK-m3t">
+                                        <rect key="frame" x="0.0" y="288" width="128" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Bmw-Df-NEL" firstAttribute="height" secondItem="if4-X3-vPr" secondAttribute="height" id="Cbk-Cu-mZq"/>
+                                    <constraint firstItem="Bmw-Df-NEL" firstAttribute="width" secondItem="if4-X3-vPr" secondAttribute="width" id="G61-Cq-wQD"/>
+                                    <constraint firstItem="ryt-TK-m3t" firstAttribute="height" secondItem="Bmw-Df-NEL" secondAttribute="height" id="cg8-1z-7Ws"/>
+                                    <constraint firstItem="ryt-TK-m3t" firstAttribute="width" secondItem="Bmw-Df-NEL" secondAttribute="width" id="riC-3u-Vyn"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLH-nS-ypi">
+                                <rect key="frame" x="118" y="697" width="156" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Change color"/>
+                                <connections>
+                                    <action selector="buttonChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTs-V3-CcW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Aff-xk-3Ns" secondAttribute="bottom" constant="292" id="0yM-jY-OhD"/>
+                            <constraint firstItem="CLH-nS-ypi" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="DZT-XD-398"/>
+                            <constraint firstItem="CLH-nS-ypi" firstAttribute="top" relation="lessThanOrEqual" secondItem="ryt-TK-m3t" secondAttribute="bottom" constant="176" id="Vcx-Qj-gll"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CLH-nS-ypi" secondAttribute="bottom" constant="81" id="Yeh-Bd-Akx"/>
+                            <constraint firstItem="CLH-nS-ypi" firstAttribute="centerX" secondItem="Aff-xk-3Ns" secondAttribute="centerX" id="hWV-x7-XvD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aff-xk-3Ns" secondAttribute="trailing" constant="133" id="k6G-24-Bak"/>
+                            <constraint firstItem="Aff-xk-3Ns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="rKs-Ck-46U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="CLH-nS-ypi" secondAttribute="trailing" constant="119" id="wLJ-ho-CVy"/>
+                            <constraint firstItem="Aff-xk-3Ns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="zWd-Dp-6B4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="greenView" destination="ryt-TK-m3t" id="mNP-1e-jU0"/>
+                        <outlet property="redView" destination="if4-X3-vPr" id="uhn-OV-go3"/>
+                        <outlet property="textButton" destination="CLH-nS-ypi" id="DaF-G0-fqS"/>
+                        <outlet property="yellowView" destination="Bmw-Df-NEL" id="y0T-2s-c1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.877862595419849" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
